@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>{{heading}}</title>
+</head>
+<body>
+    <h1>pendaftaran peserta didik baru (PPDB)</h1>
+    <ul>
+        <li><a href="{% url 'index' %}">Home</a>/li>
+    </ul>
+    <form method="post">
+        {% crsf_token %}
+        <table>
+            {{data_form.as_table}}
+        </table>
+        <br>
+        <button type="submit">kirim</button>
+    </form>
+    
+</body>
+</html>
